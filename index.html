@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Pro | IT Test Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div id="home-screen" class="screen">
+            <header>
+                <h1>QUIZ PRO</h1>
+                <p>Кәсіби деңгейдегі білім тексеру жүйесі</p>
+            </header>
+            
+            <div class="menu-card">
+                <h3>Тест блогын таңдаңыз:</h3>
+                <div class="grid-menu">
+                    <button onclick="initQuiz(0, 50)">1 - 50</button>
+                    <button onclick="initQuiz(50, 100)">51 - 100</button>
+                    <button onclick="initQuiz(100, 150)">101 - 150</button>
+                    <button onclick="initQuiz(150, 200)">151 - 200</button>
+                    <button onclick="initQuiz(200, 250)">201 - 250</button>
+                    <button onclick="initQuiz(250, 300)">251 - 300</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <span id="progress-text">Сұрақ: 1/50</span>
+                <div class="progress-bar"><div id="bar-fill"></div></div>
+            </div>
+
+            <div id="question-box">
+                <h2 id="q-text"></h2>
+                <div id="options-list" class="options-grid"></div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="hidden" onclick="loadNextQuestion()">Келесі сұрақ</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <div class="result-card">
+                <h2>Тест аяқталды!</h2>
+                <div class="score-circle">
+                    <span id="final-score">0</span>
+                </div>
+                <p id="result-message">Жақсы нәтиже!</p>
+                <button onclick="restartQuiz()">Басты мәзірге оралу</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+:root {
+    --bg: #f8fafc;
+    --primary: #2563eb;
+    --white: #ffffff;
+    --text: #1e293b;
+    --success: #22c55e;
+    --error: #ef4444;
+    --shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.app-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.hidden { display: none; }
+
+.screen {
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header { text-align: center; margin-bottom: 40px; }
+header h1 { color: var(--primary); font-size: 3rem; letter-spacing: -1px; margin: 0; }
+header p { color: #64748b; margin-top: 5px; }
+
+.menu-card, .result-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    background: var(--primary);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.option-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+    border: 2px solid #e2e8f0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option-item:hover { border-color: var(--primary); background: #f1f5f9; }
+.correct { background: var(--success) !important; color: white; border-color: var(--success); }
+.wrong { background: var(--error) !important; color: white; border-color: var(--error); }
