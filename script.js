@@ -2137,8 +2137,7 @@ function showQuestion() {
     document.getElementById('bar-fill').style.width = `${((currentIndex + 1) / currentSet.length) * 100}%`;
     const optionsContainer = document.getElementById('options-list');
     optionsContainer.innerHTML = '';
-    optionsContainer.style.pointerEvents = 'none'; // Басуды өшіру
-    optionsContainer.style.opacity = '0.6'; // Визуалды түрде көрсету
+    optionsContainer.style.pointerEvents = 'none';
     setTimeout(() => {
         optionsContainer.style.pointerEvents = 'auto';
         optionsContainer.style.opacity = '1';
